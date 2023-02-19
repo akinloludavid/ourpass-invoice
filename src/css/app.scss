@@ -1,0 +1,56 @@
+// app global css in SCSS form
+@import "../css/quasar.variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+body {
+  background-color: $light;
+}
+.main-container {
+  padding: 0 120px;
+}
+a.router-link-exact-active {
+  color: $primary !important;
+  border-bottom: 2px solid $primary;
+}
+.navbar {
+  padding: 0px 120px;
+  height: 60px;
+  width: 100vw;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  .nav-logo {
+    h3 {
+      color: $primary;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .nav-link-wrapper {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    margin: 0px;
+
+    a {
+      text-decoration: none;
+      // height: 100%;
+      color: $dark;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
