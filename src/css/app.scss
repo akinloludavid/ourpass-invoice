@@ -8,6 +8,51 @@
 body {
   background-color: $light;
 }
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+}
+hr {
+  border: 1px solid #f3f3f3;
+}
+input {
+  border-radius: 8px;
+  border: 2px solid #f3f3f3;
+  padding: 12px;
+  background: none;
+  outline: none;
+  width: 100%;
+  color: #030303;
+  font-size: 16px;
+  font-weight: 700;
+}
+input:focus {
+  border: 1px solid $primary;
+}
+input::placeholder {
+  color: #888;
+}
+
+.btn {
+  border: none;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #f6f5fe;
+  color: $primary;
+  padding: 0px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
 .main-container {
   padding: 0 120px;
 }
@@ -53,4 +98,9 @@ a.router-link-exact-active {
 
 .flex {
   display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
