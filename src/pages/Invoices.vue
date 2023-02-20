@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container invoice">
+  <div class="main-container invoice-page">
     <div class="invoice-title">
       <h4>Invoices</h4>
       /
@@ -65,19 +65,23 @@
         <div></div>
         <hr style="grid-column: 1/9" />
         <div class="grid-item1">
-          <input type="text" placeholder="Item name" />
+          <input
+            value="Project name-Monlight Mobile Design"
+            type="text"
+            placeholder="Item name"
+          />
         </div>
         <div class="grid-item2">
-          <input type="text" placeholder="Hour" />
+          <input value="120" type="text" placeholder="Hour" />
         </div>
         <div class="grid-item3">
-          <input type="text" placeholder="Rate" />
+          <input value="40.00" type="text" placeholder="Rate" />
         </div>
         <div class="grid-item4">
-          <input type="text" disabled placeholder="Tax" />
+          <input value="0.00" type="text" disabled placeholder="Tax" />
         </div>
         <div class="grid-item5">
-          <input type="text" placeholder="Line Total" />
+          <input value="4800.00" type="text" placeholder="Line Total" />
         </div>
         <div class="grid-item6">
           <div class="plus-icon">+</div>
@@ -160,6 +164,9 @@ export default {
 </script>
 
 <style scoped>
+.invoice-page {
+  margin-top: 60px;
+}
 .invoice-title {
   display: flex;
   align-items: center;

@@ -79,6 +79,9 @@ a.router-link-exact-active {
     font-size: 18px;
   }
 }
+.page {
+  margin-top: 60px;
+}
 .navbar {
   padding: 0px 120px;
   height: 60px;
@@ -87,6 +90,9 @@ a.router-link-exact-active {
   display: flex;
   align-items: center;
   gap: 40px;
+  position: fixed;
+  top: 0px;
+  z-index: 99999;
   .nav-logo {
     display: flex;
     justify-content: space-between;

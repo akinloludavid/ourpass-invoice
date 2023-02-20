@@ -1,5 +1,5 @@
 <template>
-  <h2>activity</h2>
+  <h2 class="page">Activity</h2>
 </template>
 
 <script>
