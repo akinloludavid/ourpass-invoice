@@ -47,19 +47,19 @@
       </div>
       <hr />
       <div class="item-details-grid">
-        <div class="grid-item1">
+        <div class="grid-item1 heading">
           <p>Item Name</p>
         </div>
-        <div class="grid-item2">
+        <div class="grid-item2 heading">
           <p>Hours</p>
         </div>
-        <div class="grid-item3">
+        <div class="grid-item3 heading">
           <p>Rate/hr</p>
         </div>
-        <div class="grid-item4">
+        <div class="grid-item4 heading">
           <p>Tax</p>
         </div>
-        <div class="grid-item5">
+        <div class="grid-item5 heading">
           <p>Line Total</p>
         </div>
         <div></div>
@@ -142,7 +142,21 @@
 </template>
 
 <script>
-export default {};
+import { api } from "../boot/axios";
+export default {
+  data() {
+    return {
+      invoice: null,
+    };
+  },
+  created() {
+    api
+      .get("/api/invoice")
+      .then((res) => console.log(res.data))
+      // .then((json) => console.log(json))
+      .catch((err) => console.log(err.message));
+  },
+};
 </script>
 
 <style scoped>
@@ -270,5 +284,40 @@ export default {};
 }
 .sub-total h4 {
   text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+  .payment-section {
+    padding: 0px;
+    gap: 20px;
+  }
+
+  .amount {
+    width: 100%;
+  }
+  .amount > .flex {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+  }
+  .account-details {
+    margin-top: 20px;
+  }
+  .payment {
+    width: 100%;
+  }
+  .heading,
+  hr {
+    display: none;
+  }
+  .item-details-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-item1 {
+    grid-column: 1/1;
+  }
+  .grid-item6 {
+    grid-row-start: 8;
+  }
 }
 </style>

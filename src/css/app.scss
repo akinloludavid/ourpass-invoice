@@ -60,6 +60,25 @@ a.router-link-exact-active {
   color: $primary !important;
   border-bottom: 2px solid $primary;
 }
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  padding: 20px;
+  left: 0px;
+
+  flex-direction: column;
+  background-color: #f3f3f3;
+  gap: 20px;
+  width: 300px;
+  top: 60px;
+  a {
+    text-decoration: none;
+    width: fit-content;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
 .navbar {
   padding: 0px 120px;
   height: 60px;
@@ -69,6 +88,9 @@ a.router-link-exact-active {
   align-items: center;
   gap: 40px;
   .nav-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     h3 {
       color: $primary;
       font-size: 24px;
@@ -103,4 +125,27 @@ a.router-link-exact-active {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+.hamburger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar,
+  .main-container {
+    padding: 0 24px;
+  }
+  .nav-link-wrapper {
+    display: none !important;
+  }
+  .nav-logo {
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
 }

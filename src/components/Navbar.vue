@@ -2,8 +2,17 @@
   <nav class="navbar">
     <div class="nav-logo">
       <h3>Paypay.</h3>
+      <div class="hamburger">
+        <q-btn flat round dense icon="menu" @click="toggle" />
+        <!-- <div class="md-menu" /> -->
+      </div>
     </div>
     <div class="nav-link-wrapper">
+      <router-link :to="link.route" v-for="link of navLinks" :key="link.label">
+        <h3>{{ link.label }}</h3>
+      </router-link>
+    </div>
+    <div class="fixed mobile-menu" v-if="isMenu">
       <router-link :to="link.route" v-for="link of navLinks" :key="link.label">
         <h3>{{ link.label }}</h3>
       </router-link>
@@ -38,11 +47,12 @@ export default {
   data() {
     return {
       navLinks,
+      isMenu: false,
     };
   },
   methods: {
-    isNavActive(str) {
-      return window.location.pathname === str;
+    toggle() {
+      this.isMenu = !this.isMenu;
     },
   },
 };
