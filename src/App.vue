@@ -11,5 +11,8 @@ if (process.env.NODE_ENV === "development") {
 
 export default defineComponent({
   name: "App",
+  mounted() {
+    this.$router.push("/invoices");
+  },
 });
 </script>

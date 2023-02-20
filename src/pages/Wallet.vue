@@ -1,5 +1,5 @@
 <template>
-  <h2>wallets</h2>
+  <h2>Wallets</h2>
 </template>
 
 <script>
